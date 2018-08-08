@@ -89,29 +89,53 @@ export default {
 </script>
 
 <style scoped>
- .thumbnail {
-   display: flex;
- }
+  /* Video list styles */
+  .thumbnail {
+    display: flex;
+  }
 
- .thumbnail img {
-   width: 168px;
- }
+  .thumbnail img {
+    width: 168px;
+  }
 
- .thumbnail-info {
-   margin-left: 20px;
- }
+  .thumbnail-info {
+    margin-left: 20px;
+  }
 
- .thumbnail h3 {
-   font-size: 16px;
- }
+  .thumbnail h3 {
+    font-size: 16px;
+  }
 
- h3,
- p {
-   margin: 0;
-   padding: 0;
- }
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+  }
 
- .thumbnail-views {
-   font-size: 14px;
- }
+  .thumbnail-views {
+    font-size: 14px;
+  }
+
+  /* Active Video styles */
+  .video-player {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+  }
+
+  .video-container {
+    margin-right: 40px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    background: #d0021b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+  }
 </style>
