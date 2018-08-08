@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img id="logo" src="./assets/vuetube-logo.png" alt="">
     <VideoPlayer />
   </div>
 </template>
@@ -21,5 +22,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+
+#logo {
+  width: 140px;
+  margin: 14px;
 }
 </style>
