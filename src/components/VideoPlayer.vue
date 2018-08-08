@@ -8,7 +8,7 @@
       <h3>{{ this.activeVideo.title }}</h3>
       <div class="row">
         <p>{{ this.activeVideo.views }} views</p>
-        <p>{{ this.activeVideo.likes }} <button>Like</button></p>
+        <p>{{ this.activeVideo.likes }} <button v-on:click="addLike">Like</button></p>
       </div>
     </div>
     <!-- Video List (sidebar) -->
@@ -94,6 +94,10 @@ export default {
     increaseViewCount () {
       // Increase active video views count
       this.activeVideo.views++
+    },
+    addLike() {
+      // Increase like count of active video
+      this.activeVideo.likes += 1
     }
   }
 }
