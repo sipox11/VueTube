@@ -13,7 +13,7 @@
     </div>
     <!-- Video List (sidebar) -->
     <div class="video-list">
-      <div :key="video.id" v-for="video in videos" class="thumbnail">
+      <div :key="video.id" v-for="video in videos" class="thumbnail" v-on:click="setActiveVideo(video)">
         <div class="thumbnail-img">
           <img :src="video.thumbnail" />
         </div>
@@ -83,6 +83,17 @@ export default {
     return {
       videos,
       activeVideo: videos[0]
+    }
+  },
+  methods: {
+    setActiveVideo (video) {
+      console.log('Switching active video to: ', video)
+      this.activeVideo = video
+      this.increaseViewCount()
+    },
+    increaseViewCount () {
+      // Increase active video views count
+      this.activeVideo.views++
     }
   }
 }
