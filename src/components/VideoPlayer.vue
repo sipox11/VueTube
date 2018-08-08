@@ -2,7 +2,14 @@
   <div class='video-player'>
     <!-- Active Video -->
     <div class="video-container">
+      <!-- Video -->
       <iframe width="640" height="360" :src="this.activeVideo.youtubeURL" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- Video info -->
+      <h3>{{ this.activeVideo.title }}</h3>
+      <div class="row">
+        <p>{{ this.activeVideo.views }} views</p>
+        <p>{{ this.activeVideo.likes }} <button>Like</button></p>
+      </div>
     </div>
     <!-- Video List (sidebar) -->
     <div class="video-list">
